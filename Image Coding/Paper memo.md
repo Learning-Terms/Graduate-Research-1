@@ -44,7 +44,7 @@ But for machines, we care about **preserving features important for recognition*
 - So, Image Compression before Image Recognition means:**Designing compression that keeps the important info for AI models.** and **Possibly sacrificing human-visible quality if it helps machine performance.**
 
 #### Does the image recogantion model itself like YOLO has image compression algorithms?
-- ❌ No, image recognition models like YOLO do not perform image compression.
+- **❌ No, image recognition models like YOLO do not perform image compression**.
 - YOLO (You Only Look Once) is a real-time object detection model. It takes an input image (already in a usable format, like JPEG or a tensor) and **Finds objects, Classifies them and Outputs bounding boxes and labels**.
 - Image compression is done before recognition, by a separate process or model, to: **Reduce image size, Remove "unimportant" information, Save storage or speed up transmission**.
 - Image compression may be done by other deep compression models like **Autoencoders, Variational Autoencoders (VAEs)**.
