@@ -62,3 +62,15 @@ But for machines, we care about **preserving features important for recognition*
 [ Detection Results ]
 ```
 
+## Introduction
+### Captures from paper
+- **Image compression**  is essential, especially on occasions where many images need to be **transmitted and stored** while having **limited bandwidth and storage**.
+-  image coding methods such as JPEG, AVC/H.264, HEVC/H.265, and VVC/H.266 have been created. These image compression methods are composed of hand-crafted algorithms, created based on the
+knowledge of data encoding experts.
+- **Neural network based image compression(NIC)** has also been the subject of much research in recent years.
+- Conventional coding methods compress images while preserving image quality. In other words, they are **not efficient compression methods for image recognition**. Hence, it is necessary to devise an image compression method **specifically for object detection models and segmentation models**. The research field on image compression for such purposes is called **Image Coding for Machines (ICM)**.
+- There are two main approaches in the study of ICM.
+     - The first approach is **ROI-based method** in which **ROI-map** is used to allocate more bits to the object region in the images. As shown in Fig. 1(a), this approach needs an **ROI-map as input** in addition to the image to be encoded. The problem with this approach is that it requires process to prepare the ROI-map before compressing the image.
+     -  The second approach is **task-loss-based method**. As shown in Fig. 1(b), in this approach, the NIC model is trained using task-loss to create an image compression model for image recognition. The **task-loss is calculated by the image recognition accuracy of the coded image created using the NIC model**. For example, when training an NIC model for object detection, the detection accuracy of the coded image by NIC model is used as the loss function. Thus, the loss function is defined by the output values of the image recognition model. **However, these values are output from a black box, which makes it difficult for the NIC model to learn them**. In addition, when training an NIC model with task-loss, the **NIC model corresponding to the image recognition model is required**. It is due to the variation in task-loss, dependent on the type of image recognition model.
+- To solve this problem, we propose an NIC model which **learns the object region in the images**. This **compression model** is trained using a **Object-MSE-loss**. The Object-MSE-loss is **the difference between the object region in the input image and that of the output decoded image**. By applying this loss to train the NIC model, only the object regions is decoded cleanly leaving the other regions untouched. Thus, **information in the image that is unnecessary for image recognition is eliminated**.
+
