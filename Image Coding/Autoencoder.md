@@ -4,7 +4,11 @@
 - An Autoencoder is a type of **neural network** used to **compress and reconstruct data** — usually **unsupervised (no labels required)**.
 
 ![Autoencoder](https://i-blog.csdnimg.cn/blog_migrate/708a6a4d75c2e7e6178ba99b6d3239fc.png)
+
+
 [CSDN Blog1](https://blog.csdn.net/a13545564067/article/details/139982318?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522e44955dde814ff36f54716eb661dc0b3%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=e44955dde814ff36f54716eb661dc0b3&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-139982318-null-null.142^v102^pc_search_result_base4&utm_term=%E8%87%AA%E7%BC%96%E7%A0%81%E5%99%A8&spm=1018.2226.3001.4187)
+
+
 [一文读懂自编码器(AutoEncoder)](https://blog.csdn.net/hellozhxy/article/details/131184241?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522e44955dde814ff36f54716eb661dc0b3%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=e44955dde814ff36f54716eb661dc0b3&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_click~default-2-131184241-null-null.142^v102^pc_search_result_base4&utm_term=%E8%87%AA%E7%BC%96%E7%A0%81%E5%99%A8&spm=1018.2226.3001.4187)
 
 - It has two main parts: **Encoder&Decoder**
